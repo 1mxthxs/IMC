@@ -54,6 +54,41 @@ main header{
     border-radius: 10px;
     background: #0808fa;
 }
+
+#conteiner #popup{
+    display: block;
+    position: absolute;
+    width: 480px;
+    height: 360px;
+    left: 65vh;
+    top: 31vh;
+
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+#conteiner #popup div{
+    display: block;
+    margin: 25px auto;
+    background-color: lightgreen;
+    width: 165px;
+    height: 165px;
+}
+#conteiner #popup h1{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+#conteiner #popup input{
+    margin-top: 45px;
+    background-color: #0808fa;
+    border-radius: 10px;
+
+    font-size: 1em;
+    color: white;
+    padding: 5px 70px;
+}
+
 #conteiner #imgDemostração{
     display: block;
     margin: auto;

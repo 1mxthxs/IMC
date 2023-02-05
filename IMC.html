@@ -16,6 +16,7 @@
         </header>
 
         <div id="conteiner">
+
             <div id="input">
                 <div>
                     <p>Insira seu Peso</p>
@@ -30,7 +31,14 @@
             <div id="send">
                 <input type="button" value="CALCULAR" onclick="calcular()">
             </div>
+            <div id="popup">
+                <div>
 
+                </div>
+                <h1>RESULTADO FINAL:</h1>
+                <h1 id="resultado2"></h1>
+                <input type="button" value="FECHAR" onclick="fechar()">
+            </div>
             <div id="imgDemostração">
                 <p>Imagem Demostração</p>
                 <img src="assets/imgDemonstração.jpg" alt="imgDemostração">
@@ -42,10 +50,13 @@
         </div>  
     </main>
     <script>
+        popup = document.getElementById('popup');
+        popup.style.display = 'none';
         function calcular(){
             var pesoInput = document.getElementById('peso').value;
             var alturaInput = document.getElementById('altura').value;
             var res = document.getElementById('resultado');
+            var res2 = document.getElementById('resultado2');
 
             if(pesoInput.length == 0 || alturaInput.length == 0){
                 res.innerHTML = 'Inválido!';
@@ -55,8 +66,17 @@
                 var peso = Number(pesoInput);
                 var altura = Number(alturaInput);
                 var IMC = peso /(altura * altura);
+                //abrir();
+                popup.style.display = 'block';
+                res2.innerHTML = `${IMC.toFixed(2)}`;
                 res.innerHTML = `Resultado: ${IMC.toFixed(2)}`;
             }
+        }
+        function abrir(){
+            popup.style.display = 'block';
+        }
+        function fechar(){
+            popup.style.display = 'none';
         }
     </script>
 </body>
