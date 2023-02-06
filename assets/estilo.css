@@ -54,9 +54,12 @@ main header{
     border-radius: 10px;
     background: #0808fa;
 }
-
+#conteiner #send input:hover{  
+    transition: 0.2s; 
+    background-color: black;
+}
 #conteiner #popup{
-    display: block;
+    display: none;
     position: absolute;
     width: 480px;
     height: 360px;

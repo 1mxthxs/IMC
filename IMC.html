@@ -51,7 +51,7 @@
     </main>
     <script>
         popup = document.getElementById('popup');
-        popup.style.display = 'none';
+
         function calcular(){
             var pesoInput = document.getElementById('peso').value;
             var alturaInput = document.getElementById('altura').value;
@@ -73,9 +73,11 @@
             }
         }
         function abrir(){
+            popup = document.getElementById('popup');
             popup.style.display = 'block';
         }
         function fechar(){
+            popup = document.getElementById('popup');
             popup.style.display = 'none';
         }
     </script>
